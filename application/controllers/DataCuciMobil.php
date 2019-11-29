@@ -97,4 +97,15 @@ class DataCuciMobil extends CI_Controller{
 
         echo json_encode($query);
     }
+
+    public function registerCustomer(){
+        $data = [
+            'nama' => $this->input->post('nama'),
+            'username' => $this->input->post('username'),
+            'password' => $this->input->post('password')
+        ];
+
+        $res = $this->CM->addCustomer($data);
+        echo json_encode($res);
+    }
 }
