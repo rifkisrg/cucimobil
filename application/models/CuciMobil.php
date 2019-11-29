@@ -115,7 +115,7 @@ class CuciMobil extends CI_Model{
 
     public function addPegawai($dataPegawai)
     {
-        $query = $this->db->insert('layanan', $dataPegawai);
+		$query = $this->db->insert('pegawai', $dataPegawai);
 
         if ($query) {
             $res['status'] = true;

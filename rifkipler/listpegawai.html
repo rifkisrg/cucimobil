@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Aplikasi cuci mobil</title>
+	<link href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="page-one">
+	<div data-role="header">
+		<h1>Daftar Pegawai</h1>
+	</div>
+	<div class="ui-content" role="main">
+		<a class="ui-shadow ui-btn ui-corner-all" href="addpegawai.html">Input pegawai</a>
+		<ul data-filter="true" data-insert="true" data-role="listview" id="list-pegawai"></ul>
+	</div>
+</div>
+<div data-role="page" data-theme="b" id="page-two">
+	<div data-role="header">
+		<h1>Detail Pegawai</h1>
+	</div>
+	<form class="get_id" id="getid" method="post">
+		<div>
+			<input id="id_pegawai" name="id_pegawai" style="text-align: center" type="hidden">
+		</div>
+	</form>
+	<div class="ui-content" id="main2" role="main">
+		<p id="p-name"></p><br>
+		<p id="p-address"></p><br>
+		<p id="p-phone"></p><br>
+		<p id="p-count"></p>
+	</div>
+	<div id="listView" style="display: none">
+		<h1 style="align-items: center">List pekerjaan</h1>
+		<div class="ui-content" id="list-pekerjaan">
+			<ul data-filter="true" data-insert="true" data-role="listview" id="list-reservasi">
+			</ul>
+		</div>
+	</div>
+	<a class="ui-btn" href="listpegawai.html" id="hapus" rel="external" style="color: red">Hapus</a>
+	<a class="ui-btn" href="listpegawai.html" rel="external">Kembali Ke Menu Utama</a>
+</div>
+<script src="app.js" type="text/javascript"></script>
+<script>
+    Application.initApplication();
+</script>
+</body>
+</html>

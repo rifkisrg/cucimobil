@@ -82,8 +82,9 @@ class DataCuciMobil extends CI_Controller{
     public function tambahPegawai()
     {
         $data = [
-            'nama_pegawai' => $this->input->post('nama_pegawai'),
-            'id_reservasi' => $this->input->post('id_reservasi')
+			'nama_pegawai' => $_POST('name'),
+			'no_telp' => $_POST('notelp'),
+			'alamat' => $_POST('address')
         ];
 
         $res = $this->CM->addPegawai($data);

@@ -3,10 +3,13 @@ var Application = {
         $(document).on('click', '#btn-cust', function () {
             Application.initShowListCustomer();
         });
+		$(document).on('click', '#ayo-input', function () {
+			Application.initAddPegawai();
+		})
     },
     initShowListCustomer: function () {
         $.ajax({
-            url: 'http:/ppk/cucimobil/DataCuciMobil/lihatCustomer',
+			url: 'http://cucimobil/DataCuciMobil/lihatCustomer',
             type: 'get',
             dataType: 'JSON',
             beforeSend: function () {
@@ -26,5 +29,21 @@ var Application = {
                 $.mobile.loading('hide');
             }
         })
-    }
-}
+	},
+	initAddPegawai: function () {
+		$.ajax({
+			url: 'http://cucimobil/DataCuciMobil/tambahPegawai',
+			type: 'post',
+			dataType: 'JSON',
+			beforeSend: function () {
+				$.mobile.loading('show', {
+					text: 'Inserting data...',
+					textVisible: true
+				});
+			},
+			complete: function () {
+				$.mobile.loading('hide');
+			}
+		})
+	}
+};

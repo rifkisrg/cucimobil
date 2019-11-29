@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aplikasi cuci mobil</title>
+	<link href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" rel="stylesheet"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<a class="ui-shadow ui-btn ui-corner-all" href="listpegawai.html" id="lihat">Lihat list pegawai</a>
+<a class="ui-shadow ui-btn ui-corner-all" href="addpegawai.html" id="input">Input pegawai</a>
+</body>
+<script>
+    $(document).on('click', '#input', function () {
+        window.location.href = 'index2.html';
+    });
+    $(document).on('click', '#lihat', function () {
+        window.location.href = 'index.html';
+    })
+</script>
+</html>
