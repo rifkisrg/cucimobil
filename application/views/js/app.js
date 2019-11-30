@@ -31,6 +31,9 @@ var Application = {
         })
 	},
 	initAddPegawai: function () {
+		var nama_pegawai = $('#name').val();
+		var alamat = $('#address').val();                                                                                                                                                                                                     $('#product_name').val();
+		var no_telp        = $('#notelp').val();
 		$.ajax({
 			url: '',
 			type: 'post',

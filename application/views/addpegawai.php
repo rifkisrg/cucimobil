@@ -39,9 +39,9 @@
 		</div>
 	</form>
 </div>
-<script src="js/app.js" type="text/javascript"></script>
+<script src="js/pegawai.js" type="text/javascript"></script>
 <script>
-
+	var baseURL= "<?php echo base_url();?>";
     Application.initApplication();
 </script>
 </body>
