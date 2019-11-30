@@ -32,7 +32,7 @@ var Application = {
 	},
 	initAddPegawai: function () {
 		$.ajax({
-			url: 'https://Users/juju/Documents/cucimobil/application/controllers/DataCuciMobil/tambahPegawai',
+			url: '',
 			type: 'post',
 			dataType: 'JSON',
 			beforeSend: function () {
